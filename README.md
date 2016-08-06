@@ -1,16 +1,14 @@
 # request-proxy
-Proxy's http get requests to other sites
+Proxy's http GET requests via nginx to other sites
 
-## Request
+Send a `GET` request with a header named `Upstream-URL`	whose value is the site
+a request is being proxied to.
 
-Send a `GET` request with query parameter `url` set to the URL being retrieved
+Example using curl:
 
-## Reponse
+`curl -H "Upstream-URL: http://www.nation.co.ke/latestrss.rss" my.proxy.site.com`
 
-A JSON object with the following attributes:
+Replace `my.proxy.site.com` with the URL of the proxy server.
 
-`status` - the status code returned from the `url`
-
-`headers` - the headers returned by url
-
-`content` - body of the response returned from `url`
+The initial plan was to implement the proxy using a python script running behind
+a web server, but decided to keep things simple and do it in the webserver itself
