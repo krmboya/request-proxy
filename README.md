@@ -11,6 +11,7 @@ Example using curl:
 Replace `my.proxy.site.com` with the URL of the proxy server.
 
 The initial plan was to implement the proxy using a python script running behind
-a web server, but decided to keep things simple and do it in the webserver itself.
+a web server, but decided to keep things simple and do it in the webserver
+itself. The proxy also supports cross origin requests.
 
-An example running server: http://proxy.99nth.com
+An example running proxy: http://proxy.99nth.com
